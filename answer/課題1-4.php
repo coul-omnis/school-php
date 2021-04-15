@@ -28,8 +28,8 @@ error_reporting(E_ALL ^ E_NOTICE);
     <p>解答例</p>
     <form action="課題1-4.php" method="get">
         <input type="hidden" name="sentaku">
-        <input type="radio" name="sentaku" value="はい">
-        <input type="radio" name="sentaku" value="いいえ">
+        <input type="radio" name="sentaku" value="はい">はい
+        <input type="radio" name="sentaku" value="いいえ">いいえ
         <input type="submit">
     </form>
     <?php 
@@ -49,9 +49,9 @@ error_reporting(E_ALL ^ E_NOTICE);
     キャラクターの変数を作り、「はい」「いいえ」による選択肢で<br>好感度が上下するプログラムを作ってください。</p>
     <p>解答例</p>
     <form action="課題1-4.php" method="get">
-        <input type="hidden" name="sentaku">
-        <input type="radio" name="sentaku" value="はい">
-        <input type="radio" name="sentaku" value="いいえ">
+        <input type="hidden" name="sentaku2">
+        <input type="radio" name="sentaku2" value="はい">はい
+        <input type="radio" name="sentaku2" value="いいえ">いいえ
         <input type="submit">
     </form>
 
@@ -89,9 +89,9 @@ error_reporting(E_ALL ^ E_NOTICE);
 </p>
     <p>解答例</p>
     <form action="課題1-4.php" method="get">
-        <input type="hidden" name="sentaku">
-        <input type="radio" name="sentaku" value="はい">
-        <input type="radio" name="sentaku" value="いいえ">
+        <input type="hidden" name="sentaku3">
+        <input type="radio" name="sentaku3" value="はい">はい
+        <input type="radio" name="sentaku3" value="いいえ">いいえ
         <input type="submit">
     </form>
 
