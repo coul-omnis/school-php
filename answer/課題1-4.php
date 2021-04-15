@@ -49,7 +49,6 @@ error_reporting(E_ALL ^ E_NOTICE);
     キャラクターの変数を作り、「はい」「いいえ」による選択肢で<br>好感度が上下するプログラムを作ってください。</p>
     <p>解答例</p>
     <form action="課題1-4.php" method="get">
-        <input type="hidden" name="sentaku2">
         <input type="radio" name="sentaku2" value="はい">はい
         <input type="radio" name="sentaku2" value="いいえ">いいえ
         <input type="submit">
@@ -58,23 +57,21 @@ error_reporting(E_ALL ^ E_NOTICE);
     <?php
     $chr= "name";
     @$_SESSION["koukando"];
-    if(@$_SESSION["koukando"]==0 || is_null(@$_SESSION["koukando"])):
-    else:
-        if(@$_GET["sentaku"]=="はい"):
+
+        if(@$_GET["sentaku2"]=="はい"):
         echo "好きです"."<br>";
-        @$_SESSION["koukando"]=$_SESSION["koukando"]+15;
+        @$_SESSION["koukando"]=@$_SESSION["koukando"]+15;
         echo "現在の好感度は".$_SESSION["koukando"]."です。";        
 
-        elseif(@$_GET["sentaku"]=="いいえ"):
+        elseif(@$_GET["sentaku2"]=="いいえ"):
             echo "嫌いです"."<br>";
-            $_SESSION["koukando"]=$_SESSION["koukando"]-15;
-            echo "現在の好感度は".$_SESSION["koukando"]."です。";
+            $_SESSION["koukando"]=@$_SESSION["koukando"]-15;
+            echo "現在の好感度は".@$_SESSION["koukando"]."です。";
        
         else:
-            echo "特に好感度".$_SESSION["koukando"]."から変化はありません。";
+            echo "特に好感度".@$_SESSION["koukando"]."から変化はありません。";
         endif;
         
-    endif;
     ?>
 </div>
 
@@ -89,7 +86,6 @@ error_reporting(E_ALL ^ E_NOTICE);
 </p>
     <p>解答例</p>
     <form action="課題1-4.php" method="get">
-        <input type="hidden" name="sentaku3">
         <input type="radio" name="sentaku3" value="はい">はい
         <input type="radio" name="sentaku3" value="いいえ">いいえ
         <input type="submit">
@@ -98,28 +94,27 @@ error_reporting(E_ALL ^ E_NOTICE);
     <?php
     $chr= "name";
     @$_SESSION["koukando2"];
-    if(@$_SESSION["koukando2"]==0 || is_null(@$_SESSION["koukando2"])):
-    else:
-        if(@$_GET["sentaku"]=="はい"):
-            echo "好きです"."<br>";
-            $_SESSION["koukando2"]=$_SESSION["koukando2"]+15;
-            echo "現在の好感度は".$_SESSION["koukando2"]."です。";
 
-            if( $_SESSION["koukando2"]>=100):
+        if(@$_GET["sentaku3"]=="はい"):
+            echo "好きです"."<br>";
+            @$_SESSION["koukando2"]=@$_SESSION["koukando2"]+15;
+            echo "現在の好感度は".@$_SESSION["koukando2"]."です。";
+
+            if($_SESSION["koukando2"]>=100):
                 echo "ハッピーエンド"."<br>";
             endif;
 
-        elseif(@$_GET["sentaku"]=="いいえ"):
+        elseif(@$_GET["sentaku3"]=="いいえ"):
             echo "嫌いです"."<br>";
             @$_SESSION["koukando2"]=$_SESSION["koukando2"]-15;
-            echo "現在の好感度は".$_SESSION["koukando2"]."です。";
+            echo "現在の好感度は".@$_SESSION["koukando2"]."です。";
             if( $_SESSION["koukando2"]<=-100):
                 echo "バッドエンド"."<br>";
             endif;
         else:
-            echo "特に好感度".$_SESSION["koukando2"]."から変化はありません。";
+            echo "特に好感度".@$_SESSION["koukando2"]."から変化はありません。";
         endif;
-    endif;
+
     ?>
 </div>
 
