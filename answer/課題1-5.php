@@ -56,6 +56,7 @@ error_reporting(0);
     $a=$a+5;
     echo $a."<br>";
     }
+    
     ?>
 </div><!-- ----------------------------- -->
 
@@ -106,10 +107,10 @@ Whileを3回使わないように関数を用いて短くしましょう。</p>
 
     if(($a_sum+$b_sum+$c_sum)>=300):
         echo $a_sum+$b_sum+$c_sum;
-        echo "〇";
+        echo "〇<br>";
     else:
         echo $a_sum+$b_sum+$c_sum;
-        echo "×";
+        echo "×<br>";
     endif;
 
     
