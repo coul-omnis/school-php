@@ -29,15 +29,16 @@ error_reporting(0);
     <p>解答例</p>
     <?php
 
-if(echo "a"."2"){ //エラーが出る。echoは条件式に当てはまらない為
-}
+// if(echo "a"."2"){ //エラーが出る。echoは条件式に当てはまらない為
+// }
 echo "test","test"; //エラーは出ない
 
-print "test","test"; //カンマではエラーが出る（複数指定ができないため）
+// print "test","test"; //カンマではエラーが出る（複数指定ができないため）
 
 print "test"."test"; //結合演算子なら式の為、可能
 
 if(print "a"."2"){ //printは式なのでifの中に条件式として入れる事が可能。
+    return false;
 }
 ?>
 
@@ -65,7 +66,7 @@ if(print "a"."2"){ //printは式なのでifの中に条件式として入れる�
         // echo "<br>";
         // echo "<br>";
 
-         foreach ($arr as $key => $value) {　//上記出力とは違い、基本的に中身の値を抜き出す時
+         foreach ($arr as $key => $value) {//上記出力とは違い、基本的に中身の値を抜き出す時
              echo $key;
          }
 
