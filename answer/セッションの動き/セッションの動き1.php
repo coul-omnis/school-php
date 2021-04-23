@@ -24,6 +24,5 @@
         $_SESSION["sukinanamae"]="sukinamono<br>";
         echo $_SESSION["sukinanamae"];
     ?>
-
 </body>
 </html>
