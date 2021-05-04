@@ -38,7 +38,7 @@ foreach ($color as $key => $value) {
 $color2 = ["赤"=>"赤信号","青"=>"青信号","黄"=>"黄信号"];
 foreach ($color2 as $key2) {
     echo $key2."<br>";
-    echo $value2."<br>";
+    echo $value2."<br>"; //Undefindedエラー
 }
 
 ?>
