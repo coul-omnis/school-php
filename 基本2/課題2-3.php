@@ -15,10 +15,10 @@
     </style>
 </head>
 <body>
-<p>PHP課題2-2</p>
+<p>PHP課題2-3</p>
 <div>
 <p style="border-bottom:1px solid #ccc;">
-連想配列で色々やってみる。+foreachもやってみる
+値を入力して配列として入れる
 </p>
 <p>解答例</p>
 <form action="課題2-2.php" post="">
@@ -28,12 +28,14 @@
 <?php
 
 
-$color = [1=>"赤信号",2=>"青信号",3=>"黄信号",4=>"紫信号",5=>"緑信号"];
+$color = [1=>"赤信号",5=>"青信号",10=>"黄信号",15=>"紫信号",20=>"緑信号"];
 foreach ($color as $key => $value) {
     echo $key."<br>";
     echo $value."<br>";
     echo ($key-1)."<br>";
 }
+echo $color[2]."<br>"; //エラー
+echo $color[5]."<br>";
 ?>
 ----------------------<br>
 
@@ -43,7 +45,7 @@ foreach ($color as $key => $value) {
 
 $color2 = [6=>"赤信号",7=>"青信号",8=>"黄信号",0=>"紫信号",1=>"緑信号"];
 for ($i=1; $i <= 3; $i++) { 
-    echo $color2[$i]."<br>";
+    // echo $color2[$i]."<br>";
 }
 var_dump($color2);
 
