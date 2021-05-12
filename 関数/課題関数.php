@@ -19,35 +19,14 @@
 <p>PHP課題2-3</p>
 <div>
 <p style="border-bottom:1px solid #ccc;">
-値を入力して配列として入れる
+関数のやつ
 </p>
 <p>解答例</p>
 
 <?php
 
 
-function fizzBuzz(int $i): string
-{
-    $result = '';
- 
-    if ($i % 3 === 0) {
-        $result .= 'Fizz';
-    }
- 
-    if ($i % 5 === 0) {
-        $result .= 'Buzz';
-    }
- 
-    if (($i % 3 !== 0) && ($i % 5 !== 0)) {
-        $result .= (int)$i;
-    }
- 
-    return $result;
-}
- 
-for ($i = 1; $i <= 20; $i++) {
-    echo fizzBuzz($i), PHP_EOL;
-}
+
 ?>
 </div>
 
