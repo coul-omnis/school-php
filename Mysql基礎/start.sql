@@ -43,3 +43,17 @@ insert into samplebox (name) values("東西南北");
 
 -- 全カラム抽出
 select * from samplebox;
+
+-- 課題
+-- １，データベースのtest2を作り、そのtest2の中にsample1とsample2というテーブルを作りなさい。
+
+-- ２，上記のsample1のカラムはid,name,class,addressの4つのカラムを作りなさい。
+-- データ型はそれぞれint、varchar、varchar、varcharとします。
+-- 尚、固定長は自由に決めなさい。
+
+-- ３，sample2のテーブルにはcus_id,cus_moneyの2つのカラムを作りなさい。
+-- データ型は両方ともintとします。
+
+-- ４，sample1に、4つほどのレコードをそれぞれ適当に入れなさい。
+
+-- ５，上記のレコードを入れた後、selectでidとnameだけを取り出しなさい。
